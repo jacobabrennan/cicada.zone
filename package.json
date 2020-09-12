@@ -1,0 +1,26 @@
+{
+  "name": "chirp",
+  "version": "0.0.0",
+  "description": "Website for sharing and composing Chiptunes",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacobabrennan/chirp.git"
+  },
+  "author": "Jacob A Brennan",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/jacobabrennan/chirp/issues"
+  },
+  "homepage": "https://github.com/jacobabrennan/chirp#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "knex": "^0.21.5",
+    "pg": "^8.3.3"
+  }
+}

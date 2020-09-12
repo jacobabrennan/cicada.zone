@@ -1,0 +1,6 @@
+node_modules
+public
+secure
+
+data_api
+knexfile.js
