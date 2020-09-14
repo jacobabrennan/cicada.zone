@@ -1,6 +1,6 @@
 
 
-//==Mushroom Ordering Server ===================================================
+//== Mushroom Ordering Server ==================================================
 
 //-- Dependencies --------------------------------
 import express from 'express';
@@ -13,7 +13,7 @@ import authentication from './authentication/index.js';
 //-- Project Constants ---------------------------
 const PORT = 7231;
 const SERVER_LISTEN_MESSAGE = `Server started on port ${PORT}`;
-const PATH_STATIC = 'public';
+const PATH_STATIC = '../client';
 const URL_AUTHENTICATION = '/auth';
 const URL_STATIC = '/';
 // const URL_DATA_API = '/data';

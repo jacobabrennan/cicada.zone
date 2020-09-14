@@ -42,7 +42,7 @@ router.get(URL_LOGIN, async function (request, response, next) {
 //-- Registration --------------------------------
 router.post(URL_REGISTRATION, async function (request, response, next) {
     // Retrieve user submitted credentials
-    let userNameRequested = request.body.userName;
+    let userNameRequested = request.body.username;
     let passwordRaw = request.body.password;
     let emailRaw = request.body.email;
     // Attempt to register a new user, using credentials
@@ -72,7 +72,7 @@ router.post(URL_REGISTRATION, async function (request, response, next) {
 router.post(URL_LOGIN, async function (request, response, next) {
     let username;
     // Retrieve user submitted credentials
-    let userNameRaw = request.body.userName;
+    let userNameRaw = request.body.username;
     let passwordRaw = request.body.password;
     // Cancel if already logged in
     try {
@@ -100,6 +100,18 @@ router.post(URL_LOGIN, async function (request, response, next) {
 });
 
 //-- Logout --------------------------------------
+router.get(URL_LOGOUT, async function (request, response, next) {
+    // Cancel if not currently logged in
+    if(!request.session.username) {
+        next(ERROR_AUTH_NOLOGIN);
+        return;
+    }
+    // Destroy session
+    delete request.session.username;
+    // Redirect home
+    response.status(303);
+    response.redirect('/');
+});
 router.post(URL_LOGOUT, async function (request, response, next) {
     // Cancel if not currently logged in
     if(!request.session.username) {
