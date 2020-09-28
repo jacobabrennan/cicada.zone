@@ -21,4 +21,4 @@ The website is built from the cloud server up, using the following technologies:
 * [JacobABrennan/APU](https://github.com/jacobabrennan/apu): audio synthesizer
 
 ## Live Demo
-A live demo exists at [Cicada.jacobabrennan.com](https://cicada.jacobabrennan.com).
+A live demo exists at [Cicada.zone](https://cicada.zone).
